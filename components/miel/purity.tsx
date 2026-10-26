@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion, useScroll, useTransform, type MotionValue } from 'motion/react'
 import { useRef } from 'react'
 import { Eyebrow } from './reveal'
@@ -103,6 +104,28 @@ export function Purity() {
               Nuestra única promesa es la más difícil de cumplir: que la miel llegue a tu mesa con la misma pureza con
               la que salió de las flores del Chaco.
             </p>
+
+            {/* Certificación Sanitaria y Trazabilidad Real */}
+            <div className="overflow-hidden rounded-2xl border border-forest/15 bg-forest/5 p-2 backdrop-blur-sm max-w-sm">
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
+                <Image
+                  src="/images/miel-senasag.webp"
+                  alt="Registro sanitario SENASAG y lote envasado de Miel Natural del Bosque Chaqueño"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 90vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="mt-2 flex items-center justify-between px-1">
+                <span className="font-label text-[9px] uppercase tracking-[0.25em] text-bronze font-semibold">
+                  Certificación SENASAG
+                </span>
+                <span className="font-sans text-[10px] text-forest/75">
+                  RSA-AB-02345 · Sabarendi
+                </span>
+              </div>
+            </div>
+
             <p className="font-label text-[10px] uppercase tracking-[0.45em] text-bronze">
               Cosecha artesanal en frío · Origen intacto Cuevo
             </p>
